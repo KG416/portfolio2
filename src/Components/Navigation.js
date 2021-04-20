@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
 import * as ROUTES from '../constants/routes'
+import { StyledNav } from '../style/mainStyles';
 
 const Navigation = () => {
     return (
-        <nav>
+        <StyledNav>
             <Link to={ROUTES.HOME}>
                 <img alt="logo" />
             </Link>
@@ -19,7 +20,7 @@ const Navigation = () => {
                     <Link to={ROUTES.CONTACT}>Kontakt</Link>
                 </li>
             </ul>
-        </nav>
+        </StyledNav>
     )
 }
 
