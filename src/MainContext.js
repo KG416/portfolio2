@@ -15,7 +15,6 @@ export default function MainContextProvider({ children }) {
 
     const themeToggler = () => {
         theme === 'dark' ? setTheme('light') : setTheme('dark');
-        console.log("theme state is now = " + theme);
     }
 
     //Everything I want to be able to reach anywhere in the project, I put inside this object

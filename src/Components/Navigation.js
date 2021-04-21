@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom'
 import * as ROUTES from '../constants/routes'
-import { StyledNav } from '../style/mainStyles';
+import { StyledNav, StyledThemeButton } from '../style/mainStyles';
 import { useMainContext } from '../MainContext';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 
 const Navigation = () => {
     const { theme, themeToggler } = useMainContext();
@@ -16,20 +14,18 @@ const Navigation = () => {
 
             <ul>
                 <li>
-                    <Link to={ROUTES.PROJECTS}>Mina Projekt</Link>
+                    <Link to={ROUTES.PROJECTS}>🏠 Mina Projekt</Link>
                 </li>
                 <li>
-                    <Link to={ROUTES.ABOUT}>Om Mig</Link>
+                    <Link to={ROUTES.ABOUT}>👱 Om Mig</Link>
                 </li>
                 <li>
-                    <Link to={ROUTES.CONTACT}>Kontakt</Link>
+                    <Link to={ROUTES.CONTACT}>📞 Kontakt</Link>
                 </li>
                 <li>
-                    <button onClick={themeToggler}>
-                        {theme === 'dark' ?
-                            <FontAwesomeIcon icon={faSun} /> :
-                            <FontAwesomeIcon icon={faMoon} />}
-                    </button>
+                    <StyledThemeButton onClick={themeToggler}>
+                        {theme === 'dark' ? '🌔' : '🌒'}
+                    </StyledThemeButton>
                 </li>
             </ul>
         </StyledNav>

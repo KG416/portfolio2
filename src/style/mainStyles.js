@@ -6,7 +6,11 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     list-style: none;
+    border: none;
     text-decoration: none;
+    &:focus {
+        outline: none;
+    }
 }
 html {
     background-color: ${props => props.theme.background1}
@@ -18,13 +22,11 @@ h1, h2, h3 {
 `;
 /* ========================= Navbar =========================*/
 export const StyledNav = styled.nav`
-
     background-color: ${props => props.theme.background1};
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
 ul {
     display: flex;
     flex-direction: row;
@@ -34,11 +36,21 @@ ul {
 ul > li {
     color: ${props => props.theme.color1};
     margin: 1vw;
-        &:hover {
+        &:hover{
         text-decoration: underline;
     }
 }
 li > a, p {
     color: ${props => props.theme.color1};
 }
+`;
+
+/* ========================= Buttons =========================*/
+export const StyledThemeButton = styled.button`
+    background-color: transparent;
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
 `;
