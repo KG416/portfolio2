@@ -9,16 +9,17 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
 }
 html {
-    background-color: rgb(45, 45, 45);
+    background-color: ${props => props.theme.background1}
 }
-h1, h2, h3, img {
-    color: white;
+h1, h2, h3 {
+    font-size: 3em;
+    color: ${props => props.theme.color1}
 }
 `;
 /* ========================= Navbar =========================*/
 export const StyledNav = styled.nav`
 
-    background-color: rgb(23, 23, 23);
+    background-color: ${props => props.theme.background1};
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -28,16 +29,16 @@ ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 50px;
+    height: 80px;
 }
 ul > li {
-    color: white;
+    color: ${props => props.theme.color1};
     margin: 1vw;
         &:hover {
         text-decoration: underline;
     }
 }
-li > a {
-    color: white;
+li > a, p {
+    color: ${props => props.theme.color1};
 }
 `;
