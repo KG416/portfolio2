@@ -15,9 +15,14 @@ export const GlobalStyles = createGlobalStyle`
 html {
     background-color: ${props => props.theme.background1}
 }
-h1, h2, h3 {
+h1 {
     font-size: 3em;
-    color: ${props => props.theme.color1}
+    color: ${props => props.theme.color1};
+    text-align: center;
+}
+h3 {
+    color: ${props => props.theme.color1};
+    margin: 50px;
 }
 `;
 /* ========================= Navbar =========================*/

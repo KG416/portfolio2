@@ -2,7 +2,7 @@
 import Navigation from './Navigation';
 import Home from './Home';
 import Projects from './Projects'
-import About from './About'
+import Skills from './Skills'
 import Contact from './Contact'
 import * as ROUTES from '../constants/routes'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -10,6 +10,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { GlobalStyles } from '../style/mainStyles';
 import { ThemeProvider } from 'styled-components';
 import { useMainContext } from '../MainContext';
+
+
 
 function App() {
   const { theme, lightTheme, darkTheme } = useMainContext();
@@ -22,10 +24,12 @@ function App() {
           <Navigation />
 
           <Switch>
-            <Route path={ROUTES.HOME} exact component={Home} />
-            <Route path={ROUTES.PROJECTS} component={Projects} />
-            <Route path={ROUTES.ABOUT} component={About} />
-            <Route path={ROUTES.CONTACT} component={Contact} />
+            <div>
+              <Route path={ROUTES.HOME} exact component={Home} />
+              <Route path={ROUTES.PROJECTS} component={Projects} />
+              <Route path={ROUTES.SKILLS} component={Skills} />
+              <Route path={ROUTES.CONTACT} component={Contact} />
+            </div>
           </Switch>
 
         </ThemeProvider>

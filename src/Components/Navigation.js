@@ -17,7 +17,7 @@ const Navigation = () => {
                     <Link to={ROUTES.PROJECTS}>🏠 Mina Projekt</Link>
                 </li>
                 <li>
-                    <Link to={ROUTES.ABOUT}>👱 Om Mig</Link>
+                    <Link to={ROUTES.SKILLS}>👱 Om Mig</Link>
                 </li>
                 <li>
                     <Link to={ROUTES.CONTACT}>📞 Kontakt</Link>
