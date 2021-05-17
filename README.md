@@ -1,4 +1,5 @@
 # Portfolio 2
+:construction: WIP
 
-## Created by
-Karl G
+## By
+- [Karl Gunnarsson](https://github.com/KG416)
