@@ -3,7 +3,7 @@ export const darkTheme = {
     color2: '#d0d0d0',
     color3: '#b1b1b1',
     background1: 'black',
-    background2: '#222222',
+    background2: '#181818',
     background3: '#323232',
     funColor: '#fff9b5',
 }

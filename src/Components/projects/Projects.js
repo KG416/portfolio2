@@ -1,4 +1,4 @@
-import useFetchProjects from '../hooks/useFetchProjects';
+import useFetchProjects from '../../hooks/useFetchProjects';
 import ProjectsList from './ProjectsList';
 
 const Projects = () => {
@@ -8,7 +8,9 @@ const Projects = () => {
 
     return (
         <>
-            <h1>Mina Projekt</h1>
+            <h1>Några projekt jag skapat</h1>
+
+            <h1>GitHub Repos</h1>
             { error && <div>{error}</div>}
             { isPending && <div>loading...</div>}
             { projects && <ProjectsList projects={projects} />}

@@ -59,3 +59,28 @@ export const StyledThemeButton = styled.button`
     border-radius: 50%;
     cursor: pointer;
 `;
+
+/* ========================= Content =========================*/
+export const MainCard = styled.div`
+    color: ${props => props.theme.color1};
+    background-color: ${props => props.theme.background2};
+    margin: 30px;
+    padding: 15px;
+    width: 400px;
+    border-radius: 5px;
+    h2 {
+        color: ${props => props.theme.funColor};
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    p {
+        margin-left: 15px;
+        margin: 10px;
+        max-width: 300px;
+    }
+    a {
+        color: ${props => props.theme.color1};
+        margin-left: 40px;
+    }
+`;

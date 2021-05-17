@@ -1,30 +1,34 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { MainCard } from '../style/mainStyles';
 
 const Contact = () => {
-
 
     const handleSubmit = () => {
         console.log('form submitted');
     };
 
-    return (
-        <>
-            <h1>Maila mig</h1>
-            <h2>kallegunnarsson@hotmail.com</h2>
-            <h3>eller tryck här</h3>
+    return (<>
+        <h1>Kontakt</h1>
+        <MainCard>
+            <h2>Maila mig</h2>
+            <p>kallegunnarsson@hotmail.com</p>
             <a href="mailto:kallegunnarsson@hotmail.com">
                 <FontAwesomeIcon icon={faEnvelope} />
             </a>
-            <h3>eller...</h3>
+        </MainCard>
+
+
+        <h3>eller...</h3>
+        <MainCard>
             <form onSubmit={handleSubmit}>
-                <h1>Eller skriv direkt</h1>
+                <h2>Skriv direkt...</h2>
                 <input type="textarea" placeholder='Ditt meddelande...' />
-                <h2>Så får du svar hit</h2>
+                <h2>...och få svar hit</h2>
                 <input type="text" placeholder='Din mailadress...' />
                 <button>Skicka</button>
             </form>
-        </>
-    )
+        </MainCard>
+    </>)
 }
 export default Contact;
