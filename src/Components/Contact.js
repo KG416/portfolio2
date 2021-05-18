@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { MainCard } from '../style/mainStyles';
+import { TextCard } from '../style/mainStyles';
 
 const Contact = () => {
 
@@ -10,17 +10,17 @@ const Contact = () => {
 
     return (<>
         <h1>Kontakt</h1>
-        <MainCard>
+        <TextCard>
             <h2>Maila mig</h2>
             <p>kallegunnarsson@hotmail.com</p>
             <a href="mailto:kallegunnarsson@hotmail.com">
                 <FontAwesomeIcon icon={faEnvelope} />
             </a>
-        </MainCard>
+        </TextCard>
 
 
         <h3>eller...</h3>
-        <MainCard>
+        <TextCard>
             <form onSubmit={handleSubmit}>
                 <h2>Skriv direkt...</h2>
                 <input type="textarea" placeholder='Ditt meddelande...' />
@@ -28,7 +28,7 @@ const Contact = () => {
                 <input type="text" placeholder='Din mailadress...' />
                 <button>Skicka</button>
             </form>
-        </MainCard>
+        </TextCard>
     </>)
 }
 export default Contact;

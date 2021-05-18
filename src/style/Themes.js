@@ -14,7 +14,7 @@ export const lightTheme = {
     color3: '#323232',
     background1: 'white',
     background2: '#f7f7f7',
-    background3: '#b1b1b1',
+    background3: '#cdcdcd',
     funColor: '#f1356d',
 }
 

@@ -1,19 +1,21 @@
-import useFetchProjects from '../../hooks/useFetchProjects';
+import useFetchRepos from '../../hooks/useFetchRepos';
 import ProjectsList from './ProjectsList';
+import ReposList from './ReposList';
+import { projectsArray as projects } from './projectsArray';
 
 const Projects = () => {
-    const { data: projects, isPending, error } = useFetchProjects('https://api.github.com/users/kg416/repos');
-
-    console.log(projects);
+    const { data: repos, isPending, error } = useFetchRepos('https://api.github.com/users/kg416/repos');
+    //console.log(repos);
 
     return (
         <>
-            <h1>Några projekt jag skapat</h1>
+            <h1>Några projekt jag skapat.</h1>
+            { projects && <ProjectsList projects={projects} />}
 
-            <h1>GitHub Repos</h1>
+            <h1>GitHub Repon.</h1>
             { error && <div>{error}</div>}
             { isPending && <div>loading...</div>}
-            { projects && <ProjectsList projects={projects} />}
+            { repos && <ReposList repos={repos} />}
         </>
     )
 }

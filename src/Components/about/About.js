@@ -1,4 +1,4 @@
-import SkillsItem from './SkillsItem';
+import SkillsList from './SkillsList';
 
 const About = () => {
 
@@ -9,7 +9,7 @@ const About = () => {
 
             <h1>Kunskaper</h1>
             <h3>Dessa språk och verktyg har jag jobbat med.</h3>
-            <SkillsItem />
+            <SkillsList />
         </div>
     )
 }
