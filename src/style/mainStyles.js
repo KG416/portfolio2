@@ -24,6 +24,7 @@ h1 {
 h3 {
     color: ${props => props.theme.color1};
     margin: 50px;
+    text-align: center;
 }
 `;
 
@@ -39,14 +40,16 @@ export const StyledThemeButton = styled.button`
 
 /* ========================= Content =========================*/
 export const PageWrapper = styled.div`
-    /* background-color: orange; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     h1 {
-        margin: 40px;
+        margin-top: 120px;
+        margin-bottom: 100px;
     }
+`;
+
+export const CardWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 `;
 
 export const TextCard = styled.div`
@@ -83,7 +86,7 @@ export const ImgCard = styled.div`
     align-items: center;
     margin: 15px;
     padding: 15px;
-    width: 400px;
+    width: 350px;
     border-radius: 5px;
     h3 {
         color: ${props => props.theme.color1};

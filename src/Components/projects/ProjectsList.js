@@ -6,7 +6,7 @@ const ProjectsList = ({ projects }) => {
             <ImgCard key={project.id}>
                 <img
                     src={project.imgPath}
-                    alt="project image"
+                    alt="project"
                 />
                 <p>{project.text}</p>
                 <h3>{project.label}</h3>

@@ -2,6 +2,7 @@ import useFetchRepos from '../../hooks/useFetchRepos';
 import ProjectsList from './ProjectsList';
 import ReposList from './ReposList';
 import { projectsArray as projects } from './projectsArray';
+import { CardWrapper } from '../../style/mainStyles';
 
 const Projects = () => {
     const { data: repos, isPending, error } = useFetchRepos('https://api.github.com/users/kg416/repos');
@@ -10,12 +11,16 @@ const Projects = () => {
     return (
         <>
             <h1>Några projekt jag skapat.</h1>
-            { projects && <ProjectsList projects={projects} />}
+            <CardWrapper>
+                {projects && <ProjectsList projects={projects} />}
+            </CardWrapper>
 
-            <h1>GitHub Repon.</h1>
+            <h1>GitHub Repos.</h1>
             { error && <div>{error}</div>}
             { isPending && <div>loading...</div>}
-            { repos && <ReposList repos={repos} />}
+            <CardWrapper>
+                {repos && <ReposList repos={repos} />}
+            </CardWrapper>
         </>
     )
 }
