@@ -24,7 +24,7 @@ const Contact = () => {
         <CardWrapper>
             <TextCard>
                 <form onSubmit={handleSubmit}>
-                    <h2>Skriv direkt...</h2>
+                    <h2>Skriv här...</h2>
                     <input type="textarea" placeholder='Ditt meddelande...' />
                     <h2>...och få svar hit</h2>
                     <input type="text" placeholder='Din mailadress...' />
