@@ -12,6 +12,9 @@ export const GlobalStyles = createGlobalStyle`
     &:focus {
         outline: none;
     }
+
+    transition: 0.5s ease-in-out;
+
 }
 html {
     background-color: ${props => props.theme.background1}
@@ -40,6 +43,9 @@ export const StyledThemeButton = styled.button`
 
 /* ========================= Content =========================*/
 export const PageWrapper = styled.div`
+
+    margin-bottom: 100px;
+
     h1 {
         margin-top: 120px;
         margin-bottom: 100px;
@@ -52,33 +58,12 @@ export const CardWrapper = styled.div`
     flex-wrap: wrap;
 `;
 
-export const TextCard = styled.div`
-    color: ${props => props.theme.color1};
-    background-color: ${props => props.theme.background2};
-    margin: 10px;
-    padding: 15px;
-    width: 400px;
-    border-radius: 5px;
-    h2 {
-        color: ${props => props.theme.funColor};
-        font-size: 25px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-    p {
-        margin-left: 15px;
-        margin: 10px;
-        max-width: 300px;
-    }
-    a {
-        color: ${props => props.theme.color1};
-        margin-left: 40px;
-    }
-`;
-
 export const ImgCard = styled.div`
     color: ${props => props.theme.color1};
     background-color: ${props => props.theme.background2};
+    box-shadow: 0px 0px 5px 2px ${props => props.theme.shadow};
+
+    /* position: relative; */
 
     display: flex;
     flex-direction: column;
@@ -118,3 +103,74 @@ export const ImgCard = styled.div`
     }
 `;
 
+export const TextCard = styled.div`
+    color: ${props => props.theme.color1};
+    background-color: ${props => props.theme.background2};
+    box-shadow: 0px 0px 5px 2px ${props => props.theme.shadow};
+
+    margin: 10px;
+    padding: 15px;
+    width: 400px;
+    border-radius: 5px;
+    h2 {
+        color: ${props => props.theme.funColor};
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    p {
+        margin-left: 15px;
+        margin: 10px;
+        max-width: 300px;
+    }
+    a {
+        color: ${props => props.theme.color1};
+        margin-left: 40px;
+    }
+`;
+
+export const MailForm = styled.form`
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        margin-left: 17px;
+        margin-top: 30px;
+    }
+
+    .mail-input {
+        /* box-shadow: 0px 0px 5px 2px ${props => props.theme.background3}; */
+        border: 1px solid ${props => props.theme.background3};
+        font-size: 16px;
+        align-self: center;
+        border-radius: 5px;
+        width: 95%;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    textarea {
+        height: 200px;
+        resize: none;
+    }
+    .mail-address {
+        height: 40px;
+    }
+    button {
+        color: ${props => props.theme.color1};
+        font-size: 16px;
+        background-color: ${props => props.theme.background2};
+        border: 1px solid ${props => props.theme.color3};
+        cursor: pointer;
+        border-radius: 5px;
+        align-self: center;
+        width: 50%;
+        height: 40px;
+        margin-top: 30px;
+        transition: background-color 0.1s ease-in-out;
+
+        &:hover {
+            background-color: ${props => props.theme.background3};
+        }
+    }
+`;
