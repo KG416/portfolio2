@@ -83,8 +83,8 @@ export const ImgCard = styled.div`
         border-radius: 2px;
         position: relative;
 
-        -webkit-box-shadow: 0px -2px 8px -2px ${props => props.theme.background2};
-	    -moz-box-shadow: 0px -2px 8px -2px ${props => props.theme.background2};
+       /*  -webkit-box-shadow: 0px -2px 3px -2px ${props => props.theme.background2};
+	    -moz-box-shadow: 0px -2px 3px -2px ${props => props.theme.background2}; */
 	    box-shadow: 0px -2px 3px -2px ${props => props.theme.background3};
     }
     p {

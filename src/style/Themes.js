@@ -5,7 +5,7 @@ export const darkTheme = {
     background1: 'black',
     background2: '#2e2e2e',
     background3: '#404040',
-    shadow: '#5c5c5c',
+    shadow: 'rgb(0, 0, 0, 0)',
     funColor: '#fff9b5',
 }
 

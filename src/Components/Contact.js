@@ -25,7 +25,7 @@ const Contact = () => {
             <TextCard>
                 <MailForm onSubmit={handleSubmit}>
                     <h2>Skriv här...</h2>
-                    <textarea className='mail-input' placeholder='Enter = ny rad...' />
+                    <textarea className='mail-input' placeholder='Ditt meddelande...' />
                     <h2>...och få svar hit</h2>
                     <input className='mail-input mail-address' type="text" placeholder='Din mailadress...' />
                     <button>Skicka</button>
