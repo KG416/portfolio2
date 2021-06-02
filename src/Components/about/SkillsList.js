@@ -10,6 +10,7 @@ const SkillsList = () => {
                     <h2>{skill.title}</h2>
                     <p>{skill.subtitle1}</p>
                     <p>{skill.subtitle2}</p>
+                    <p>{skill.subtitle3}</p>
                 </TextCard>
             ))
         }

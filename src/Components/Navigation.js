@@ -4,17 +4,20 @@ import { StyledThemeButton } from '../style/mainStyles';
 import styled from 'styled-components';
 import { useMainContext } from '../MainContext';
 
-export const StyledNav = styled.nav`
+const StyledNav = styled.nav`
     background-color: ${props => props.theme.background1};
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    box-shadow: 0 8px 6px -6px ${props => props.theme.background3};
+    transition: background-color 0.5s ease-in-out;
 
-    -webkit-box-shadow: 0 8px 6px -6px ${props => props.theme.background2};
-	   -moz-box-shadow: 0 8px 6px -6px ${props => props.theme.background2};
-	        box-shadow: 0 8px 6px -6px ${props => props.theme.background3};
+#top-of-page {
+    position: absolute;
+    top: 0;
+}
+
 ul {
     display: flex;
     flex-direction: row;
@@ -30,6 +33,7 @@ ul > li {
 }
 li > a, p {
     color: ${props => props.theme.color1};
+    transition: 0.5s ease-in-out;
 }
 `;
 
@@ -39,13 +43,15 @@ const MainLogo = styled.h2`
     padding: 2px;
     border-radius: 2px;
     margin-left: 2vw;
+    transition: 0.5s ease-in-out;
 `;
 
 const Navigation = () => {
     const { theme, themeToggler } = useMainContext();
 
     return (
-        <StyledNav>
+        <StyledNav id='about'>
+            <div id='top-of-page'></div>
             <Link to={ROUTES.HOME}>
                 <MainLogo>Karl_G</MainLogo>
             </Link>

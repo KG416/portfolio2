@@ -1,9 +1,7 @@
 export const skillsArray = [
     {
         title: 'HTML',
-        subtitle1: 'bla1',
-        subtitle2: 'bla2',
-        id: 1
+        id: 1,
     },
     {
         title: 'CSS',
@@ -15,5 +13,18 @@ export const skillsArray = [
         title: 'JavaScript',
         subtitle1: 'React',
         id: 3
-    }
+    },
+    {
+        title: 'Versionshantering',
+        subtitle1: 'Git',
+        subtitle2: 'GitHub',
+        id: 4,
+    },
+    {
+        title: 'Backend (ish)',
+        subtitle1: 'Firebase',
+        subtitle2: 'Node.js',
+        subtitle3: 'Postman',
+        id: 5,
+    },
 ];

@@ -12,12 +12,13 @@ export const GlobalStyles = createGlobalStyle`
     &:focus {
         outline: none;
     }
-
-    transition: 0.5s ease-in-out;
-
 }
 html {
-    background-color: ${props => props.theme.background1}
+    background-color: ${props => props.theme.background1};
+    scroll-behavior: smooth;
+}
+html, h1, h2 {
+    transition: background-color 0.5s ease-in-out;
 }
 h1 {
     font-size: 3em;
@@ -25,6 +26,7 @@ h1 {
     text-align: center;
 }
 h3 {
+    font-size: 1.6em;
     color: ${props => props.theme.color1};
     margin: 50px;
     text-align: center;
@@ -43,19 +45,20 @@ export const StyledThemeButton = styled.button`
 
 /* ========================= Content =========================*/
 export const PageWrapper = styled.div`
-
+    /* border: 5px solid green; */
     margin-bottom: 100px;
-
-    h1 {
-        margin-top: 120px;
-        margin-bottom: 100px;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const CardWrapper = styled.div`
+    /* border: 2px solid red; */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 0 50px 0 50px;
 `;
 
 export const ImgCard = styled.div`
@@ -63,6 +66,7 @@ export const ImgCard = styled.div`
     background-color: ${props => props.theme.background2};
     box-shadow: 0px 0px 5px 2px ${props => props.theme.shadow};
 
+    transition: background-color 0.5s ease-in-out;
     position: relative;
 
     display: flex;
@@ -102,7 +106,8 @@ export const ImgCard = styled.div`
         max-width: 300px;
         transition: 0.2s ease-in-out;
     }
-   
+
+    /* To Website Button */
     a {
         color: ${props => props.theme.color1};
         background: transparent;
@@ -116,7 +121,7 @@ export const ImgCard = styled.div`
         font-weight: bold;
 
         opacity: 0;
-        transition: 0.05s ease-in-out;
+        transition: 0.2s ease-in-out;
 
         &:hover {
             background: ${props => props.theme.funColor};
@@ -145,14 +150,21 @@ export const ImgCard = styled.div`
 `;
 
 export const TextCard = styled.div`
+    /* border: 2px solid blue; */
     color: ${props => props.theme.color1};
     background-color: ${props => props.theme.background2};
     box-shadow: 0px 0px 5px 2px ${props => props.theme.shadow};
+    transition: background-color 0.5s ease-in-out;
 
     margin: 10px;
     padding: 15px;
     width: 400px;
     border-radius: 5px;
+
+    h2, p, a {
+        transition: background-color 0.5s ease-in-out;
+    }
+
     h2 {
         color: ${props => props.theme.funColor};
         font-size: 25px;
@@ -167,10 +179,17 @@ export const TextCard = styled.div`
     a {
         color: ${props => props.theme.color1};
         margin-left: 40px;
+        padding: 5px;
+        border: transparent;
+
+        &:hover {
+            color: ${props => props.theme.funColor};
+        }
     }
 `;
 
 export const MailForm = styled.form`
+    /* border: 2px solid orange; */
     display: flex;
     flex-direction: column;
 
@@ -180,7 +199,6 @@ export const MailForm = styled.form`
     }
 
     .mail-input {
-        /* box-shadow: 0px 0px 5px 2px ${props => props.theme.background3}; */
         border: 1px solid ${props => props.theme.background3};
         font-size: 16px;
         align-self: center;
@@ -199,19 +217,22 @@ export const MailForm = styled.form`
     }
     button {
         color: ${props => props.theme.color1};
-        font-size: 16px;
-        background-color: ${props => props.theme.background2};
-        border: 1px solid ${props => props.theme.color3};
-        cursor: pointer;
-        border-radius: 5px;
+        background: transparent;
+        border: 1px solid ${props => props.theme.funColor};
         align-self: center;
-        width: 50%;
-        height: 40px;
-        margin-top: 30px;
-        transition: background-color 0.1s ease-in-out;
+        cursor: pointer;
+        margin: 15px;
+        padding: 10px 50px 10px 50px;
+        border-radius: 50px;
+        font-weight: bold;
+
+        transition: 0.2s ease-in-out;
 
         &:hover {
-            background-color: ${props => props.theme.background3};
+            background: ${props => props.theme.funColor};
+            color: ${props => props.theme.background1};
+            border: 1px solid ${props => props.theme.funColor};
+            box-shadow: 0px 0px 3px 0px ${props => props.theme.color1};
         }
     }
 `;
