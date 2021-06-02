@@ -1,7 +1,7 @@
 export const projectsArray = [
     {
-        imgPath: '/images/quire-tr6.jpg',
-        text: 'Här kan du skapa, redigera och spara anteckningar. Gjord tillsammans med några andra utvecklare.',
+        imgPath: '/images/quire-tr7.jpeg',
+        text: 'En anteckningsapp. Gjord tillsammans med några andra utvecklare.',
         label: 'HTML, CSS, Figma, Vanilla JS',
         projectUrl: 'http://gutenberg-quire.surge.sh/',
         id: 1,
@@ -21,7 +21,7 @@ export const projectsArray = [
         id: 3,
     },
     {
-        imgPath: '/images/bass-filter.JPG',
+        imgPath: '/images/bass-filter2.jpeg',
         text: 'Min första portfoliosida',
         label: 'HTML, CSS, Figma, React',
         projectUrl: 'http://karlsportfolio.surge.sh/',

@@ -63,16 +63,73 @@ export const ImgCard = styled.div`
     background-color: ${props => props.theme.background2};
     box-shadow: 0px 0px 5px 2px ${props => props.theme.shadow};
 
-    /* position: relative; */
+    position: relative;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     margin: 15px;
-    padding: 15px;
+    /* padding: 15px; */
     width: 350px;
+    height: 350px;
     border-radius: 5px;
+
+    img {
+    position: absolute;
+    top: 15px;
+    width: 90%;
+    height: 67%;
+    border-radius: 5px;
+    z-index: 1;
+    transition: 0.2s ease-in-out;
+    }
+
+    &:hover img {
+            transform: translateY(-100px);
+        }
+    &:hover p, &:hover a {
+            opacity: 1;
+        }
+    &:hover h3 {
+        opacity: 0;
+    }
+    p {
+        opacity: 0;
+        align-self: flex-start;
+        margin-left: 20px;
+        margin-bottom: 25px;
+        max-width: 300px;
+        transition: 0.2s ease-in-out;
+    }
+   
+    a {
+        color: ${props => props.theme.color1};
+        background: transparent;
+        border: 1px solid ${props => props.theme.funColor};
+        cursor: pointer;
+        align-self: flex-start;
+        margin-left: 20px;
+        margin-bottom: 15px;
+        padding: 10px 15px 10px 15px;
+        border-radius: 50px;
+        font-weight: bold;
+
+        opacity: 0;
+        transition: 0.05s ease-in-out;
+
+        &:hover {
+            background: ${props => props.theme.funColor};
+            color: ${props => props.theme.background1};
+            border: 1px solid ${props => props.theme.funColor};
+            box-shadow: 0px 0px 3px 0px ${props => props.theme.color1};
+        }
+    }
+
+    .a-icon {
+        margin-left: 8px;
+    }
+
     h3 {
         color: ${props => props.theme.color1};
         font-size: 16px;
@@ -82,24 +139,8 @@ export const ImgCard = styled.div`
         font-weight: bold;
         border-radius: 2px;
         position: relative;
-
-       /*  -webkit-box-shadow: 0px -2px 3px -2px ${props => props.theme.background2};
-	    -moz-box-shadow: 0px -2px 3px -2px ${props => props.theme.background2}; */
+        transition: 0.2s ease-in-out;
 	    box-shadow: 0px -2px 3px -2px ${props => props.theme.background3};
-    }
-    p {
-        align-self: flex-start;
-        margin-left: 15px;
-        margin: 10px;
-        max-width: 300px;
-    }
-    a {
-        color: ${props => props.theme.color1};
-        margin-left: 40px;
-    }
-    img {
-    max-width: 98%;
-    border-radius: 2px;
     }
 `;
 
