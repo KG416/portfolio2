@@ -1,13 +1,12 @@
-import { CardWrapper } from '../../style/mainStyles';
-import styled from 'styled-components';
+import { TextCardWrapper } from '../../style/mainStyles';
+import styled from 'styled-components/macro';
 import SkillsList from './SkillsList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
-
 const StyledAboutContainer = styled.div`
     /* border: 5px solid red; */
-    width: 50%;
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,8 +16,7 @@ const StyledAboutContainer = styled.div`
         margin-top: 200px;
     }
 
-    section {
-        p {
+    section p {
             border-bottom: 3px solid ${props => props.theme.funColor};
             transition: border-bottom 0.5s ease-in-out;
             color: ${props => props.theme.color3};
@@ -27,7 +25,6 @@ const StyledAboutContainer = styled.div`
             font-size: 1.3em;
             max-width: 600px;
             text-align: center;
-        }
     }
 
     .arrow {
@@ -40,7 +37,9 @@ const StyledAboutContainer = styled.div`
             color: ${props => props.theme.color3};
         }
     }
-
+    .arrow-up {
+            margin-bottom: 60px;
+        }
     .second-h1 {
         margin-top: 400px;
     }
@@ -49,12 +48,13 @@ const StyledAboutContainer = styled.div`
         margin: 10px 0 80px 0;
         padding-bottom: 30px;
         border-bottom: 3px solid ${props => props.theme.funColor};
-        width: 400px;
+        width: 100%;
+        max-width: 400px;
     }
+    
     /* Medium */
     @media (max-width: 1200px) {
         /* border: 5px solid red; */
-        width: 80%;
         
         .second-h1 {
             margin-top: 200px;
@@ -63,13 +63,31 @@ const StyledAboutContainer = styled.div`
     }
     /* Mobile */
     @media (max-width: 760px) {
-        /* border: 5px solid green; */
-        width: 90%;
+        /* border: 5px solid green; */        
 
-         .second-h1 {
-            margin-top: 100px;
+        h1 {
+            margin-top: 25px;
         }
 
+        section p {
+            margin: 10px;
+            font-size: 1.2em;
+        }
+        
+        .arrow {
+            color: ${props => props.theme.color1};
+            cursor: pointer;
+            margin: 20px;
+            font-size: 40px;
+        }
+         .second-h1 {
+            margin-top: 200px;
+        }
+
+        .second-h3 {
+        padding-bottom: 40px;
+        margin: 20px 0 40px 0;
+    }
     }
 `;
 
@@ -91,11 +109,11 @@ const About = () => {
 
             <h1 id='skills' className='second-h1'>Kunskaper</h1>
             <h3 className='second-h3'>Dessa språk och verktyg har jag jobbat med.</h3>
-            <CardWrapper>
+            <TextCardWrapper>
                 <SkillsList />
-            </CardWrapper>
+            </TextCardWrapper>
 
-            <a href="#about" className='arrow'>
+            <a href="#about" className='arrow arrow-up'>
                 <FontAwesomeIcon icon={faChevronUp} />
             </a>
 

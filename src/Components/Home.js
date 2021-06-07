@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 const StyledHomeDiv = styled.div`
 
@@ -11,6 +11,22 @@ const StyledHomeDiv = styled.div`
         color: ${props => props.theme.color1};
         font-size: 3.3em;
     }
+
+    /* Medium */
+
+
+    /* Mobile */
+    @media (max-width: 760px) {
+         & > h1 {
+        margin-top: 50px;
+        font-size: 2.6em;
+    }
+
+    & > h2 {
+        font-size: 1.5em;
+    }
+    }
+
 `;
 
 const Home = () => {

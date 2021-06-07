@@ -2,8 +2,8 @@ import useFetchRepos from '../../hooks/useFetchRepos';
 import ProjectsList from './ProjectsList';
 import ReposList from './ReposList';
 import { projectsArray as projects } from './projectsArray';
-import { CardWrapper } from '../../style/mainStyles';
-import styled from 'styled-components';
+import { ImgCardWrapper, TextCardWrapper } from '../../style/mainStyles';
+import styled from 'styled-components/macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
@@ -32,6 +32,27 @@ const StyledProjectsContainer = styled.div`
             color: ${props => props.theme.color3};
         }
     }
+    .arrow-up {
+        margin-bottom: 60px;
+    }
+/* Medium */
+
+
+/* Mobile */
+@media (max-width: 760px) {
+     h1 {
+        margin-top: 80px;
+        margin-bottom: 70px;
+       /*  width: 60%; */
+    }
+    .arrow {
+        display: none;
+    }
+    .second-h1 {
+        margin-top: 70px;
+    }
+}
+
 `;
 
 const Projects = () => {
@@ -41,9 +62,9 @@ const Projects = () => {
     return (
         <StyledProjectsContainer>
             <h1>Några projekt jag skapat.</h1>
-            <CardWrapper>
+            <ImgCardWrapper>
                 {projects && <ProjectsList projects={projects} />}
-            </CardWrapper>
+            </ImgCardWrapper>
 
             <a href="#repos" className='arrow'>
                 <FontAwesomeIcon icon={faChevronDown} />
@@ -52,11 +73,11 @@ const Projects = () => {
             <h1 id='repos' className='second-h1'>GitHub Repos.</h1>
             { error && <div>{error}</div>}
             { isPending && <div>loading...</div>}
-            <CardWrapper>
+            <TextCardWrapper>
                 {repos && <ReposList repos={repos} />}
-            </CardWrapper>
+            </TextCardWrapper>
 
-            <a href="#top-of-page" className='arrow'>
+            <a href="#top-of-page" className='arrow arrow-up'>
                 <FontAwesomeIcon icon={faChevronUp} />
             </a>
 

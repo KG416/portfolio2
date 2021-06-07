@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import * as ROUTES from '../constants/routes'
 import { StyledThemeButton } from '../style/mainStyles';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { useMainContext } from '../MainContext';
 
 const StyledNav = styled.nav`
@@ -26,7 +26,7 @@ ul {
 }
 ul > li {
     color: ${props => props.theme.color1};
-    margin: 1vw;
+    padding: 1vw;
         &:hover{
         text-decoration: underline;
     }

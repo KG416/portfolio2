@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components/macro';
 
 /* ========================= Global Styles =========================*/
 export const GlobalStyles = createGlobalStyle`
@@ -24,13 +24,29 @@ h1 {
     font-size: 3em;
     color: ${props => props.theme.color1};
     text-align: center;
+    max-width: 100vw;
 }
 h3 {
     font-size: 1.6em;
     color: ${props => props.theme.color1};
-    margin: 50px;
+    /* margin: 50px; */
     text-align: center;
 }
+
+/* Medium */
+
+
+/* Mobile */
+@media (max-width: 760px) {
+h1 {
+    font-size: 2.6em;
+}
+h3 {
+    font-size: 1.6em;
+    /* margin: 50px; */
+}
+}
+
 `;
 
 /* ========================= Buttons =========================*/
@@ -44,21 +60,45 @@ export const StyledThemeButton = styled.button`
 `;
 
 /* ========================= Content =========================*/
-export const PageWrapper = styled.div`
-    /* border: 5px solid green; */
+/* export const PageWrapper = styled.div`
+    border: 5px solid green;
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-`;
 
-export const CardWrapper = styled.div`
+    @media (max-width: 760px) {
+        max-width: 100vw;
+        padding: 100px;
+    }
+
+`; */
+
+export const ImgCardWrapper = styled.div`
     /* border: 2px solid red; */
     display: flex;
     justify-content: center;
+    /* padding: 0 50px 0 50px; */
+
+    @media (max-width: 1550px) {
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 760px) {
+        
+    }
+`;
+
+export const TextCardWrapper = styled.div`
+    /* border: 2px solid orange; */
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    padding: 0 50px 0 50px;
+    
+    @media (max-width: 760px) {
+     
+    }
 `;
 
 export const ImgCard = styled.div`
@@ -147,6 +187,12 @@ export const ImgCard = styled.div`
         transition: 0.2s ease-in-out;
 	    box-shadow: 0px -2px 3px -2px ${props => props.theme.background3};
     }
+
+    /* Mobile */
+    @media (max-width: 760px) {
+        margin: 15px 0;
+    }
+
 `;
 
 export const TextCard = styled.div`
@@ -158,7 +204,8 @@ export const TextCard = styled.div`
 
     margin: 10px;
     padding: 15px;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     border-radius: 5px;
 
     h2, p, a {
@@ -186,6 +233,15 @@ export const TextCard = styled.div`
             color: ${props => props.theme.funColor};
         }
     }
+
+    @media (max-width: 760px) {
+            margin: 10px 0;
+
+        h2 {
+            font-size: 1.4em;
+        }
+    }
+
 `;
 
 export const MailForm = styled.form`

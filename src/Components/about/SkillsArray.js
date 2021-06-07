@@ -27,4 +27,9 @@ export const skillsArray = [
         subtitle3: 'Postman',
         id: 5,
     },
+    {
+        title: 'Grafiskt',
+        subtitle1: 'Figma',
+        id: 6,
+    },
 ];
