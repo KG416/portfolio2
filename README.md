@@ -17,5 +17,4 @@ Description of the project.
 ## 🔧 Tools
 
 - React
-- - A custom hook to fetch repos
 - Styled Components

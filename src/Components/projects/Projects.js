@@ -57,7 +57,6 @@ const StyledProjectsContainer = styled.div`
 
 const Projects = () => {
     const { data: repos, isPending, error } = useFetchRepos('https://api.github.com/users/kg416/repos');
-    //console.log(repos);
 
     return (
         <StyledProjectsContainer>
